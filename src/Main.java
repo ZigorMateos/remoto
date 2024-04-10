@@ -56,7 +56,7 @@ public class Main {
 					break;
 			}
 			
-		}while(opc!=3);
+		}while(opc!=5);
 	}
 
 	public static void sumar2(int cant) {
@@ -85,7 +85,6 @@ public class Main {
 	}
 	
 	public static void restar2(int num1, int num2) {
-		
 		
 		int resul = num1 - num2;
 		
