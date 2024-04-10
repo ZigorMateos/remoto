@@ -14,11 +14,16 @@ public class Main {
 	public static void menu() {
 		int opc = 0;
 		int num = 0;
+		int num1 = 0;
+		int num2 = 0;
 		
 		do {
-			System.out.println("1. Sumar números \n"
-							 + "2. Multiplicar números\n"
-							 + "3. Salir\n"
+
+			System.out.println("1. Sumar 2 números \n"
+							 + "2. Multiplicar 2 números\n"
+							 + "3. Restar 2 números\n"
+							 + "4. Dividir 2 números\n"
+							 + "5. Salir\n"
 							 + "Elige una opción: ");
 			opc = sn.nextInt();
 			switch(opc) {
@@ -31,6 +36,20 @@ public class Main {
 					System.out.println("Dime cuantos números quieres multiplicar:");
 					num = sn.nextInt();
 					multiplicar2(num);
+					break;
+				case 3:
+					System.out.println("Dime un número");
+					num1 = sn.nextInt();
+					System.out.println("Dime un número");
+					num2 = sn.nextInt();
+					restar2(num1, num2);
+					break;
+				case 4:
+					System.out.println("Dime un número");
+					num1 = sn.nextInt();
+					System.out.println("Dime un número");
+					num2 = sn.nextInt();
+					dividir2(num1, num2);
 					break;
 				default:
 					System.out.println("No has elegido una opción correcta");
@@ -61,6 +80,21 @@ public class Main {
 			resul*=sn.nextInt();
 		}
 		
+		
+		System.out.println(resul);
+	}
+	
+	public static void restar2(int num1, int num2) {
+		
+		
+		int resul = num1 - num2;
+		
+		System.out.println(resul);
+	}
+	
+	public static void dividir2(int num1, int num2) {
+		
+		int resul = num1 / num2;
 		
 		System.out.println(resul);
 	}
