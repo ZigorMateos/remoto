@@ -1,0 +1,64 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static Scanner sn = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		menu();
+		
+	}
+
+	public static void menu() {
+		int opc = 0;
+		int num1 = 0;
+		int num2 = 0;
+		
+		do {
+			System.out.println("1. Sumar 2 números \n"
+							 + "2. Multiplicar 2 números\n"
+							 + "3. Salir\n"
+							 + "Elige una opción: ");
+			opc = sn.nextInt();
+			switch(opc) {
+				case 1:
+					System.out.println("Dime un número");
+					num1 = sn.nextInt();
+					System.out.println("Dime un número");
+					num2 = sn.nextInt();
+					sumar2(num1,num2);
+					break;
+				case 2:
+					System.out.println("Dime un número");
+					num1 = sn.nextInt();
+					System.out.println("Dime un número");
+					num2 = sn.nextInt();
+					multiplicar2(num1, num2);
+					break;
+				default:
+					System.out.println("No has elegido una opción correcta");
+					break;
+			}
+			
+		}while(opc!=3);
+	}
+
+	public static void sumar2(int num1, int num2) {
+		
+		int resul = num1 + num2;
+		
+		System.out.println(resul);
+	}
+	
+	public static void multiplicar2(int num1, int num2) {
+		
+		int resul = num1 * num2;
+		
+		System.out.println(resul);
+	}
+	
+	
+
+}
